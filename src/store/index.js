@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import * as state from '../store/state'
+import state from '../store/state'
 import * as actions from '../store/actions'
 import * as mutations from '../store/mutations'
 import * as getters from '../store/getters'
