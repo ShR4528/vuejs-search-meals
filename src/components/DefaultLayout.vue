@@ -1,12 +1,10 @@
 <template>
-  <div class="bg-gray-100 h-full">
-    <navbar />
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <navbar />
+  <main>
+    <router-view />
+  </main>
 </template>
 
 <script setup>
-import Navbar from '../components/Navbar.vue';
+import Navbar from '../components/Navbar.vue'
 </script>
