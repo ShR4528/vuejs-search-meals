@@ -59,7 +59,7 @@ const meal = ref({})
 
 onMounted(() => {
   axiosClient.get(`lookup.php?i=${route.params.id}`).then(({ data }) => {
-    meal.value = data.meals[0]
+    meal.value = data.meals[0] || {}
   })
 })
 </script>

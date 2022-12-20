@@ -1,17 +1,16 @@
 <template>
-  <div class="bg-white shadow rounded-xl">
+  <div class="bg-white shadow rounded-xl hover:scale-105 transition-all">
     <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
       <img
         :src="meal.strMealThumb"
-        alt="meal.strMeal"
+        :alt="meal.strMeal"
         class="rounded-t-xl w-full h-48 object-coover"
       />
     </router-link>
     <div class="p-3">
       <h3 class="font-semibold">{{ meal.strMeal }}</h3>
       <p class="mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        at, porro eaque repudiandae.
+        {{ $filter.truncateWords(meal.strInstructions, 20) }}
       </p>
       <div class="flex-items-center justify-between">
         <YouTubeButton :href="meal.strYoutube" />
